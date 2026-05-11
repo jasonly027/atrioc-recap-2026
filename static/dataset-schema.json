@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "title": "Atrioc Recap 2026 Schema",
+  "type": "object",
+  "required": ["vods"],
+  "properties": {
+    "vods": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "date",
+          "duration",
+          "hats",
+          "yok",
+          "plaidShirt",
+          "robertStax",
+          "categories",
+          "notablePeople",
+          "gss",
+          "gssCreators",
+          "wooshed",
+          "phrases"
+        ],
+        "properties": {
+          "id": { "type": "string", "description": "YouTube Video ID" },
+
+          "title": { "type": "string", "description": "Title of the VOD" },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "The day the livestream was recorded (not the same as the VOD's upload date)"
+          },
+          "duration": {
+            "type": "integer",
+            "description": "Duration of the VOD in seconds"
+          },
+
+          "hats": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["Green Tone Enron Hat"]
+            },
+            "uniqueItems": true
+          },
+
+          "yok": { "type": "integer", "default": 0 },
+          "plaidShirt": { "type": "integer", "default": 0 },
+          "robertStax": { "type": "integer", "default": 0 },
+
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["Waffling", "Reacting", "Presentation", "Gaming"]
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+
+          "notablePeople": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Donald Trump",
+                "Jimmy Simpson",
+                "Nathan Fielder",
+                "Faker",
+                "Ali Khamenei",
+                "Zohran Mamdani",
+                "Nicolas Maduro",
+                "Vladimir Putin",
+                "Thomas Massie",
+                "Pam Bondi",
+                "Marjorie Taylor Greene",
+                "Xi Jinping",
+                "Sanae Takaichi",
+                "Marco Rubio",
+                "Tulsi Gabbard",
+                "Pete Hegseth",
+                "Volodymyr Zelenskyy",
+                "Lai Ching-te"
+              ]
+            },
+            "uniqueItems": true
+          },
+
+          "gss": { "type": "integer", "default": 0 },
+          "gssCreators": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["How Money Works", "MegaLag", "Howtown"]
+            },
+            "uniqueItems": true
+          },
+
+          "wooshed": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+
+          "phrases": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["Quagmire"]
+            }
+          },
+
+          "games": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "duration"],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": ["Warcraft III"]
+                },
+                "duration": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "collabs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["Hera"]
+            },
+            "uniqueItems": true
+          },
+
+          "promises": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "outcome"],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "outcome": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+# $schema: ./dataset-schema.json
+
+vods:
+  - id: lieIxnLQHgc
+    title: What Science Actually Says About Brainrot [Atrioc Reacts]
+    date: 2026-01-02
+    duration: 9585
+    hats:
+      - Green Tone Enron Hat
+    yok: 0
+    plaidShirt: 0
+    robertStax: 0
+    categories:
+      - Waffling
+      - Reacting
+      - Presentation
+    notablePeople:
+      - Donald Trump
+      - Jimmy Simpson
+      - Nathan Fielder
+      - Faker
+      - Ali Khamenei
+      - Zohran Mamdani
+    gss: 2
+    gssCreators:
+      - MegaLag
+      - Howtown
+    wooshed:
+      - sorosShill
+      - cap_sa1c1n
+      - tigercat_2
+      - holybrudha
+      - benedictxxii
+      - malcolmdelm
+      - thatzachary
+      - HenryCavillsCGIMustache
+      - GoodEvil12
+      - rddubs
+      - Radstads
+      - jeepwrangler2
+      - nixoneagle
+      - zkyz
+      - trotduck
+      - YessirGG
+      - thatzachary
+      - jazz_edits
+      - Lightliie
+      - real_monty_mole
+      - praiseIsaac
+      - nixoneagle
+      - carswwww
+      - QCo_B
+      - plalipus
+    phrases: []
+    promises:
+      - name: No daily clips in January
+        outcome: Yes
+      - name: Finish Ponzi Scheme Iceberg
+        outcome: TODO
+
+  - id: D4pl3InWtfE
+    title: Why Did the U.S. Attack Venezuela?
+    date: 2026-01-03
+    duration: 4654
+    hats:
+      - Green Tone Enron Hat
+    yok: 0
+    plaidShirt: 0
+    robertStax: 0
+    categories:
+      - Waffling
+      - Reacting
+      - Presentation
+    notablePeople:
+      - Donald Trump
+      - Nicolas Maduro
+      - Vladimir Putin
+      - Thomas Massie
+      - Pam Bondi
+      - Marjorie Taylor Greene
+      - Xi Jinping
+      - Sanae Takaichi
+      - Marco Rubio
+      - Tulsi Gabbard
+      - Pete Hegseth
+      - Volodymyr Zelenskyy
+      - Lai Ching-te
+    gss: 0
+    gssCreators: []
+    wooshed:
+      - TheKingPelicanIBL
+      - JP_Neutron
+      - yyianni
+      - rddubs
+      - HelpHooman
+      - rddubs
+      - xZayos
+      - waderfew
+      - kibbyjr
+      - skyskylol
+      - TaraPsych
+      - hans1olo
+      - bobjon26
+      - RareRapidash
+      - Ereristrun
+      - moivala
+      - codehdn
+      - Punkcan
+      - GeminiOS
+      - CesarEnsalada
+      - ddl12
+      - bigman10099
+      - littlespar
+      - DawgNoWay
+    phrases:
+      - Quagmire
+      - Quagmire
