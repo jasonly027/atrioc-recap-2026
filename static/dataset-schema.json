@@ -16,23 +16,23 @@
           "hats",
           "yok",
           "plaidShirt",
-          "robertStax",
           "categories",
           "notablePeople",
           "gss",
           "gssCreators",
-          "wooshed",
-          "phrases"
+          "wooshed"
         ],
         "properties": {
           "id": { "type": "string", "description": "YouTube Video ID" },
 
           "title": { "type": "string", "description": "Title of the VOD" },
+
           "date": {
             "type": "string",
             "format": "date",
             "description": "The day the livestream was recorded (not the same as the VOD's upload date)"
           },
+
           "duration": {
             "type": "integer",
             "description": "Duration of the VOD in seconds"
@@ -48,8 +48,8 @@
           },
 
           "yok": { "type": "integer", "default": 0 },
+
           "plaidShirt": { "type": "integer", "default": 0 },
-          "robertStax": { "type": "integer", "default": 0 },
 
           "categories": {
             "type": "array",
@@ -99,18 +99,18 @@
             "uniqueItems": true
           },
 
+          "perAtrioc": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+
           "wooshed": {
             "type": "array",
             "items": {
               "type": "string"
-            }
-          },
-
-          "phrases": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": ["Quagmire"]
             }
           },
 
@@ -130,6 +130,7 @@
               }
             }
           },
+
           "collabs": {
             "type": "array",
             "items": {
@@ -143,13 +144,18 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["name", "outcome"],
+              "required": ["name", "outcome", "status"],
               "properties": {
                 "name": {
                   "type": "string"
                 },
                 "outcome": {
                   "type": "string"
+                },
+                "status": {
+                  "type": "string",
+                  "enum": ["o", "x", "?"],
+                  "default": "?"
                 }
               }
             }
