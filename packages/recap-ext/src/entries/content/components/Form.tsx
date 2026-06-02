@@ -203,8 +203,9 @@ function FormInputSuggest({
 
   const onRemove = (idx: number) => {
     setValues((prev) => {
-      prev.splice(idx, 1);
-      return [...prev];
+      const next = [...prev];
+      next.splice(idx, 1);
+      return next;
     });
   };
 
@@ -263,8 +264,9 @@ export function FormPerAtrioc({
 }) {
   const onRemove = (idx: number) => {
     setValues((prev) => {
-      prev.splice(idx, 1);
-      return [...prev];
+      const next = [...prev];
+      next.splice(idx, 1);
+      return next;
     });
   };
 
@@ -277,10 +279,11 @@ export function FormPerAtrioc({
           <div key={value} className="flex flex-row gap-2">
             <input
               value={value}
-              onInput={(e) => {
+              onChange={({ currentTarget: { value } }) => {
                 setValues((prev) => {
-                  prev[idx] = e.currentTarget.value;
-                  return [...prev];
+                  const next = [...prev];
+                  next[idx] = value;
+                  return next;
                 });
               }}
               required
@@ -325,8 +328,9 @@ export function FormWooshed({
 }) {
   const onRemove = (idx: number) => {
     setValues((prev) => {
-      prev.splice(idx, 1);
-      return [...prev];
+      const next = [...prev];
+      next.splice(idx, 1);
+      return next;
     });
   };
 
@@ -383,8 +387,9 @@ export function FormGames({ value, setValue }: StatePair<FormGame[]>) {
 
   const onRemove = (idx: number) => {
     setValue((prev) => {
-      prev.splice(idx, 1);
-      return [...prev];
+      const next = [...prev];
+      next.splice(idx, 1);
+      return next;
     });
   };
 
@@ -423,10 +428,11 @@ export function FormGames({ value, setValue }: StatePair<FormGame[]>) {
           <div key={name + duration} className="flex flex-row gap-2">
             <input
               value={name}
-              onInput={(e) => {
+              onChange={({ currentTarget: { value } }) => {
                 setValue((prev) => {
-                  prev[idx]!.name = e.currentTarget.value;
-                  return [...prev];
+                  const next = [...prev];
+                  next[idx]!.name = value;
+                  return next;
                 });
               }}
               required
@@ -434,14 +440,14 @@ export function FormGames({ value, setValue }: StatePair<FormGame[]>) {
             />
             <input
               value={duration}
-              onInput={(e) => {
-                {
-                  setValue((prev) => {
-                    prev[idx]!.duration = e.currentTarget.valueAsNumber;
-                    return [...prev];
-                  });
-                }
+              onChange={({ currentTarget: { valueAsNumber } }) => {
+                setValue((prev) => {
+                  const next = [...prev];
+                  next[idx]!.duration = valueAsNumber;
+                  return next;
+                });
               }}
+              type="number"
               required
               className="px-2 border border-white/20 w-full rounded-2xl"
             />
@@ -502,8 +508,9 @@ export function FormPromises({ promises, setPromises }: FormPromisesProps) {
 
   const onRemove = (idx: number) => {
     setPromises((prev) => {
-      prev.splice(idx, 1);
-      return [...prev];
+      const next = [...prev];
+      next.splice(idx, 1);
+      return next;
     });
   };
 
@@ -546,10 +553,11 @@ export function FormPromises({ promises, setPromises }: FormPromisesProps) {
           <div key={p.name} className="flex flex-row gap-2">
             <input
               value={p.name}
-              onInput={(e) => {
+              onChange={({ currentTarget: { value } }) => {
                 setPromises((prev) => {
-                  prev[idx]!.name = e.currentTarget.value;
-                  return [...prev];
+                  const next = [...prev];
+                  next[idx]!.name = value;
+                  return next;
                 });
               }}
               required
@@ -557,11 +565,12 @@ export function FormPromises({ promises, setPromises }: FormPromisesProps) {
             />
             <input
               value={p.outcome}
-              onInput={(e) => {
+              onChange={({ currentTarget: { value } }) => {
                 {
                   setPromises((prev) => {
-                    prev[idx]!.outcome = e.currentTarget.value;
-                    return [...prev];
+                    const next = [...prev];
+                    next[idx]!.outcome = value;
+                    return next;
                   });
                 }
               }}
@@ -570,17 +579,17 @@ export function FormPromises({ promises, setPromises }: FormPromisesProps) {
             />
             <input
               value={p.status}
-              onInput={(e) => {
+              onChange={({ currentTarget: { value } }) => {
                 {
                   setPromises((prev) => {
-                    prev[idx]!.status = e.currentTarget
-                      .value as FormPromise["status"];
-                    return [...prev];
+                    const next = [...prev];
+                    next[idx]!.status = value as FormPromise["status"];
+                    return next;
                   });
                 }
               }}
               required
-              maxLength={1}
+              pattern="[ox?]"
               className="px-2 border border-white/20 w-full rounded-2xl"
             />
             <button
@@ -615,6 +624,7 @@ export function FormPromises({ promises, setPromises }: FormPromisesProps) {
             onKeyDown={onKeyDown}
             type="text"
             placeholder="Status"
+            pattern="[xo?]"
             className="px-2 border border-white/20 rounded-2xl"
           />
         </div>
