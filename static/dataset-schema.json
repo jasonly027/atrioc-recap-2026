@@ -42,23 +42,48 @@
             "type": "array",
             "items": {
               "type": "string",
-              "enum": ["Green Tone Enron Hat"]
+              "enum": [
+                "Forest Green Enron Hat",
+                "Khaki Enron Hat",
+                "Forest Market Cap Hat",
+                "Olive Green EBITDA Hat",
+                "2 Tone Dark Green Enron Hat",
+                "Blue Vintage Enron Cap",
+                "Khaki Bankrupt Hat",
+                "Spirit Airlines Hat",
+                "FTX Hat"
+              ]
             },
             "uniqueItems": true
           },
 
-          "yok": { "type": "integer", "default": 0 },
+          "yok": {
+            "type": "integer",
+            "default": 0,
+            "description": "How many times he crashed out on chatters"
+          },
 
-          "plaidShirt": { "type": "integer", "default": 0 },
+          "plaidShirt": {
+            "type": "integer",
+            "default": 0,
+            "description": "How many different plaid shirts he wore"
+          },
 
           "categories": {
             "type": "array",
             "items": {
               "type": "string",
-              "enum": ["Waffling", "Reacting", "Presentation", "Gaming"]
+              "enum": [
+                "Waffling",
+                "Reacting",
+                "Presentation",
+                "Gaming",
+                "Lakers Watch Party"
+              ]
             },
             "uniqueItems": true,
-            "minItems": 1
+            "minItems": 1,
+            "description": "Stream categories"
           },
 
           "notablePeople": {
@@ -83,20 +108,43 @@
                 "Tulsi Gabbard",
                 "Pete Hegseth",
                 "Volodymyr Zelenskyy",
-                "Lai Ching-te"
+                "Lai Ching-te",
+                "Elon Musk",
+                "Benjamin Netanyahu",
+                "Kevin Warsh",
+                "Jerome Powell",
+                "Nigel Farage",
+                "Ro Khanna",
+                "Friedrich Merz",
+                "Maria Machado",
+                "Gustavo Petro"
               ]
             },
-            "uniqueItems": true
+            "uniqueItems": true,
+            "description": "Notable people mentioned in a noteworthy context and/or for a significant amount of time"
           },
 
-          "gss": { "type": "integer", "default": 0 },
+          "gss": {
+            "type": "integer",
+            "default": 0,
+            "description": "Number of GSS-like videos watched"
+          },
           "gssCreators": {
             "type": "array",
             "items": {
               "type": "string",
-              "enum": ["How Money Works", "MegaLag", "Howtown"]
+              "enum": [
+                "How Money Works",
+                "MegaLag",
+                "Howtown",
+                "fern",
+                "Coffeezilla",
+                "Good Work",
+                "Almost Friday"
+              ]
             },
-            "uniqueItems": true
+            "uniqueItems": true,
+            "description": "Notable GSS-like video creators that appeared"
           },
 
           "perAtrioc": {
@@ -104,14 +152,16 @@
             "items": {
               "type": "string"
             },
-            "uniqueItems": true
+            "uniqueItems": true,
+            "description": "Quotes"
           },
 
           "wooshed": {
             "type": "array",
             "items": {
               "type": "string"
-            }
+            },
+            "description": "Chatters that appeared on screen"
           },
 
           "games": {
@@ -122,13 +172,21 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "enum": ["Warcraft III"]
+                  "enum": [
+                    "Warcraft III",
+                    "Age of Empires II",
+                    "Hitman 3",
+                    "007 First Light",
+                    "Monkey Ball",
+                    "Slay the Spire 2"
+                  ]
                 },
                 "duration": {
                   "type": "integer"
                 }
               }
-            }
+            },
+            "description": "Games played"
           },
 
           "collabs": {
@@ -137,7 +195,8 @@
               "type": "string",
               "enum": ["Hera"]
             },
-            "uniqueItems": true
+            "uniqueItems": true,
+            "description": "Stream Guests"
           },
 
           "promises": {
