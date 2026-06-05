@@ -78,7 +78,10 @@
                 "Reacting",
                 "Presentation",
                 "Gaming",
-                "Lakers Watch Party"
+                "Lakers Watch Party",
+                "Gym",
+                "Special Event",
+                "Daily Games"
               ]
             },
             "uniqueItems": true,
@@ -117,7 +120,31 @@
                 "Ro Khanna",
                 "Friedrich Merz",
                 "Maria Machado",
-                "Gustavo Petro"
+                "Gustavo Petro",
+                "JD Vance",
+                "Jeff Bezos",
+                "Kristi Noem",
+                "Tim Cook",
+                "Timothee Chalamet",
+                "Gwyneth Paltrow",
+                "Kevin O'Leary",
+                "Chris Hemsworth",
+                "Mark Ruffalo",
+                "Janet Yellen",
+                "Scott Bessent",
+                "Lebron James",
+                "Mark Zuckerberg",
+                "Sam Altman",
+                "Joe Rogan",
+                "Bernie Sanders",
+                "Barack Obama",
+                "Larry Ellison",
+                "Keir Starmer",
+                "Delcy Rodriguez",
+                "Mark Carney",
+                "Jeffrey Epstein",
+                "Shohei Ohtani",
+                "Steve Balmer"
               ]
             },
             "uniqueItems": true,
@@ -140,7 +167,11 @@
                 "fern",
                 "Coffeezilla",
                 "Good Work",
-                "Almost Friday"
+                "Almost Friday",
+                "Drew Gooden",
+                "videogamedunkey",
+                "Mr. Beat",
+                "Bloomberg"
               ]
             },
             "uniqueItems": true,
