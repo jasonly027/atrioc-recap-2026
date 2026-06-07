@@ -51,7 +51,8 @@
                 "Blue Vintage Enron Cap",
                 "Khaki Bankrupt Hat",
                 "Spirit Airlines Hat",
-                "FTX Hat"
+                "FTX Hat",
+                "Lakers Enron Hat"
               ]
             },
             "uniqueItems": true
@@ -78,10 +79,12 @@
                 "Reacting",
                 "Presentation",
                 "Gaming",
+                "Live React",
                 "Lakers Watch Party",
                 "Gym",
                 "Special Event",
-                "Daily Games"
+                "Daily Games",
+                "Tier List"
               ]
             },
             "uniqueItems": true,
@@ -144,7 +147,28 @@
                 "Mark Carney",
                 "Jeffrey Epstein",
                 "Shohei Ohtani",
-                "Steve Balmer"
+                "Steve Balmer",
+                "Ted Cruz",
+                "Mark Rutte",
+                "Kim Min-seok",
+                "Kash Patel",
+                "Howard Lutnick",
+                "Bill Gates",
+                "Bobby Kotick",
+                "Kendrick Lamar",
+                "Bruno Mars",
+                "Kanye West",
+                "Jensen Huang",
+                "Martha Steward",
+                "Anthony Scaramucci",
+                "Michael Saylor",
+                "Kid Rock",
+                "Prince Andrew",
+                "Todd Blanche",
+                "Steve Bannon",
+                "Woody Allen",
+                "Peter Thiel",
+                "Sam Bankman-Fried"
               ]
             },
             "uniqueItems": true,
@@ -171,7 +195,10 @@
                 "Drew Gooden",
                 "videogamedunkey",
                 "Mr. Beat",
-                "Bloomberg"
+                "Bloomberg",
+                "Evan Edinger",
+                "Casually Explained",
+                "More Perfect Union"
               ]
             },
             "uniqueItems": true,
@@ -224,7 +251,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "enum": ["Hera"]
+              "enum": ["Hera", "Ludwig", "Linkus7", "Squeex", "Aspecticor"]
             },
             "uniqueItems": true,
             "description": "Stream Guests"
