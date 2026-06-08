@@ -78,6 +78,7 @@
                 "Waffling",
                 "Reacting",
                 "Presentation",
+                "Interview",
                 "Gaming",
                 "Live React",
                 "Lakers Watch Party",
@@ -168,7 +169,17 @@
                 "Steve Bannon",
                 "Woody Allen",
                 "Peter Thiel",
-                "Sam Bankman-Fried"
+                "Sam Bankman-Fried",
+                "J. Cole",
+                "Graham Platner",
+                "Bill Clinton",
+                "Hillary Clinton",
+                "Luka Doncic",
+                "Bob Iger",
+                "50 Cent",
+                "Pete Buttigieg",
+                "Kier Starmer",
+                "Mike Johnson"
               ]
             },
             "uniqueItems": true,
@@ -198,7 +209,13 @@
                 "Bloomberg",
                 "Evan Edinger",
                 "Casually Explained",
-                "More Perfect Union"
+                "More Perfect Union",
+                "JxmyHighroller",
+                "CNBC",
+                "Business Insider",
+                "MSNBC",
+                "RDCworld1",
+                "Man Carrying Thing"
               ]
             },
             "uniqueItems": true,
