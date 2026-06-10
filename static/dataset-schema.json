@@ -46,6 +46,7 @@
                 "Forest Green Enron Hat",
                 "Khaki Enron Hat",
                 "Forest Market Cap Hat",
+                "Black Market Cap Hat",
                 "Olive Green EBITDA Hat",
                 "2 Tone Dark Green Enron Hat",
                 "Blue Vintage Enron Cap",
@@ -179,7 +180,17 @@
                 "50 Cent",
                 "Pete Buttigieg",
                 "Kier Starmer",
-                "Mike Johnson"
+                "Mike Johnson",
+                "Usain Bolt",
+                "RFK Jr.",
+                "Emmanuel Macron",
+                "Amy Coney Barrett",
+                "Brett Kavanaugh",
+                "Asha Sharma",
+                "Eric Trump",
+                "Claudia Sheinbaum",
+                "Bruno Mars",
+                "Kamala Harris"
               ]
             },
             "uniqueItems": true,
@@ -215,7 +226,10 @@
                 "Business Insider",
                 "MSNBC",
                 "RDCworld1",
-                "Man Carrying Thing"
+                "Man Carrying Thing",
+                "History Dose",
+                "Hoog",
+                "hoser"
               ]
             },
             "uniqueItems": true,
