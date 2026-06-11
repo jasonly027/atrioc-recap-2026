@@ -190,7 +190,9 @@
                 "Eric Trump",
                 "Claudia Sheinbaum",
                 "Bruno Mars",
-                "Kamala Harris"
+                "Kamala Harris",
+                "Dario Amodei",
+                "Pope Leo XIV"
               ]
             },
             "uniqueItems": true,
@@ -267,7 +269,8 @@
                     "Hitman 3",
                     "007 First Light",
                     "Monkey Ball",
-                    "Slay the Spire 2"
+                    "Slay the Spire 2",
+                    "Resident Evil Requiem"
                   ]
                 },
                 "duration": {
