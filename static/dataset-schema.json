@@ -192,7 +192,11 @@
                 "Bruno Mars",
                 "Kamala Harris",
                 "Dario Amodei",
-                "Pope Leo XIV"
+                "Pope Leo XIV",
+                "Joe Biden",
+                "Stephen Miller",
+                "Reza Pahlavi",
+                "Melania Trump"
               ]
             },
             "uniqueItems": true,
