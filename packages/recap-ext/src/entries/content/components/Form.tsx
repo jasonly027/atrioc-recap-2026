@@ -232,7 +232,7 @@ function FormInputSuggest({
         <input
           onKeyDown={(e) => {
             const input = e.target as HTMLInputElement;
-            if (e.key === "Enter" && remainingSuggests.includes(input.value)) {
+            if (e.key === "Enter") {
               setValues((prev) => {
                 const next = [...prev, input.value];
                 input.value = "";
@@ -319,6 +319,112 @@ export function FormPerAtrioc({
   );
 }
 
+export interface FormPerChatter {
+  name: string;
+  quote: string;
+}
+
+export function FormPerChatter({
+  value,
+  setValue,
+}: StatePair<FormPerChatter[]>) {
+  const nameRef = useRef<HTMLInputElement>(null);
+  const quoteRef = useRef<HTMLInputElement>(null);
+
+  const onRemove = (idx: number) => {
+    setValue((prev) => {
+      const next = [...prev];
+      next.splice(idx, 1);
+      return next;
+    });
+  };
+
+  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      setValue((prev) => {
+        if (!nameRef.current?.value || !quoteRef.current?.value) return prev;
+
+        const next = [
+          ...prev,
+          {
+            name: nameRef.current.value,
+            quote: quoteRef.current.value,
+          },
+        ];
+
+        nameRef.current.value = "";
+        quoteRef.current.value = "";
+
+        return next;
+      });
+    }
+  };
+
+  return (
+    <div className="flex flex-col gap-2 w-full">
+      <label className="text-center">Per Chatter</label>
+
+      <div className="flex flex-col gap-1">
+        {value.map(({ name, quote }, idx) => (
+          <div key={name} className="flex flex-row gap-2">
+            <input
+              value={name}
+              onChange={({ currentTarget: { value } }) => {
+                setValue((prev) => {
+                  const next = [...prev];
+                  next[idx]!.name = value;
+                  return next;
+                });
+              }}
+              required
+              className="px-2 border border-white/20 w-full rounded-2xl"
+            />
+            <input
+              value={quote}
+              onChange={({ currentTarget: { value } }) => {
+                {
+                  setValue((prev) => {
+                    const next = [...prev];
+                    next[idx]!.quote = value;
+                    return next;
+                  });
+                }
+              }}
+              required
+              className="px-2 border border-white/20 w-full rounded-2xl"
+            />
+            <button
+              type="button"
+              onClick={() => onRemove(idx)}
+              className="rounded-xl border border-white/20 cursor-pointer py-2 px-6 font-extrabold text-2xl text-red-400"
+            >
+              X
+            </button>
+          </div>
+        ))}
+
+        <div className="flex flex-row *:min-w-0 gap-2">
+          <input
+            ref={nameRef}
+            onKeyDown={onKeyDown}
+            type="text"
+            placeholder="Name"
+            className="px-2 border border-white/20 rounded-2xl"
+          />
+
+          <input
+            ref={quoteRef}
+            onKeyDown={onKeyDown}
+            type="text"
+            placeholder="Quote"
+            className="px-2 border border-white/20 rounded-2xl"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function FormWooshed({
   values,
   setValues,
@@ -397,11 +503,7 @@ export function FormGames({ value, setValue }: StatePair<FormGame[]>) {
     if (e.key === "Enter") {
       setValue((prev) => {
         if (!nameRef.current || !durationRef.current) return prev;
-        if (
-          !suggests.includes(nameRef.current.value) ||
-          !durationRef.current.valueAsNumber
-        )
-          return prev;
+        if (!durationRef.current.valueAsNumber) return prev;
 
         const next = [
           ...prev,

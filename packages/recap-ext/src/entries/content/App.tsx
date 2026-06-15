@@ -19,6 +19,7 @@ import {
   type FormPromise,
   type FormGame,
   FormPerAtrioc,
+  FormPerChatter,
 } from "./components/Form";
 import { useRef } from "#imports";
 
@@ -39,6 +40,7 @@ export function App() {
   const [gss, setGss] = useState(0);
   const [gssCreators, setGssCreators] = useState<string[]>([]);
   const [perAtrioc, setPerAtrioc] = useState<string[]>([]);
+  const [perChatter, setPerChatter] = useState<FormPerChatter[]>([]);
   const [wooshed, setWooshed] = useState<string[]>([]);
   const [games, setGames] = useState<FormGame[]>([]);
   const [collabs, setCollabs] = useState<string[]>([]);
@@ -136,6 +138,8 @@ export function App() {
         <FormGssCreators values={gssCreators} setValues={setGssCreators} />
 
         <FormPerAtrioc values={perAtrioc} setValues={setPerAtrioc} />
+
+        <FormPerChatter value={perChatter} setValue={setPerChatter} />
 
         <FormWooshed values={wooshed} setValues={setWooshed} />
 
