@@ -53,7 +53,8 @@
                 "Khaki Bankrupt Hat",
                 "Spirit Airlines Hat",
                 "FTX Hat",
-                "Lakers Enron Hat"
+                "Lakers Enron Hat",
+                "Lakers Hat"
               ]
             },
             "uniqueItems": true
@@ -86,7 +87,8 @@
                 "Gym",
                 "Special Event",
                 "Daily Games",
-                "Tier List"
+                "Tier List",
+                "Best Tweets"
               ]
             },
             "uniqueItems": true,
@@ -249,6 +251,23 @@
             },
             "uniqueItems": true,
             "description": "Quotes"
+          },
+
+          "perChatter": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "quote"],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Chatter Quotes"
           },
 
           "wooshed": {
